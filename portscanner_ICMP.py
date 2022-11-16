@@ -1,8 +1,9 @@
 import pyping
+import time
 
 target = input('What do you want to scan?: ')
 
-print('Starting scan on host:', target_ip)
+print('Starting scan on host:', target)
 start = time.time()
 
 r = pyping.ping(target)
