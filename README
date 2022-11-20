@@ -1,3 +1,36 @@
+WHAT DOES THE SCRIPT DO?
+
+It takes in 3 functions: host, port range and socket type, and runs a TCP or UDP scan on the host. 
+NOTE: UDP scan always outputs No data received (ie timeout error)
+
+Run python3 portscanner.py -h to get help 
+
+Uses argpars to define a command line interfaace.
+Defined optinonal and essential parameters and how to call them.
+Handling the argument
+
+Function using s.split  returns tuple for port range 
+
+Feeds to main function which is made up of a loop that iterates through the port range 
+
+Port_utils.py has the functions
+
+For a TCP scan run: 
+
+python3 portscanner.py -p 0-100 -s tcp scanme.nmap.org
+
+#Note, this only scans ports 0-100
+
+For UDP scan run: 
+
+python3 portscanner.py -p66-68 -s udp scanme.nmap.org
+
+#Choose whatever URL you want, it has to be placed at the end.
+
+
+
+
+SOURCES
 
 https://docs.python.org/3/library/socket.html#timeouts-and-the-accept-method
 
@@ -9,5 +42,11 @@ https://www.adamsmith.haus/python/answers/how-to-check-if-a-network-port-is-open
 
 https://stackoverflow.com/questions/47661069/python-send-and-receive-of-udp-packets
 
-
 https://stackoverflow.com/questions/58201343/python-2-7-udp-port-scanner
+
+https://docs.python.org/3/library/argparse.html
+
+https://nmap.org/book/scan-methods-udp-scan.html
+
+https://docs.python.org/3/library/socket.html#socket.gethostbyname_ex
+
