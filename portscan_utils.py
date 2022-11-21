@@ -28,7 +28,7 @@ def tcp_scanner(host, port):
 
    
 
-def udp_scanner(host, port, timeout=10):
+def udp_scanner(host, port, timeout=15):
     """
     UDP Scanner function that prints if the port is open
     """
