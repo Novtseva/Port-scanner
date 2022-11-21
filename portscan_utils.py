@@ -40,7 +40,7 @@ def udp_scanner(host, port, timeout=10):
         s1.sendto(msg, (host, port))
         data, addr = s1.recvfrom(4096)
         print("Reply received from UDP port:",port)
-        print ("Received message:", data)
+        #print ("Received message:", data)
     except ConnectionResetError:
          print("Closed UDP port:", port)
     except TimeoutError:
